@@ -98,29 +98,6 @@ const trace1 = {
 // Plot using Plotly
 Plotly.newPlot('bubble', [trace1], layout1);
 
-// BONUS: This fellow lines are written to show my attempt at the extra part 
-// but as you can see it wasn't that success as i didn't have the time to finish it. 
-
-// Gauge Chart to plot weekly washing frequency 
-const guageDisplay = d3.select("#gauge");
-guageDisplay.html(""); 
-const washFreq = idMetadata[0].wfreq;
-
-const guageData = [
-   {
-     domain: { x: [0, 1], y: [0, 1] },
-     value: washFreq,
-     title: { text: "<b>Belly Button Washing Frequency </b><br> (Scrubs Per Week)" },
-     type: "indicator",
-     mode: "gauge+number",     
-      gauge: {
-      axis: { range: [0,9] },
-      bar: { color: "#f2e9e4" },
-      steps: [
-         { range: [0, 1], color: "#e5d5d0" },
-         { range: [1, 2], color: "#dbc7c2" },
-         { range: [2, 3], color: "#d2b9b4" },
-
 });
 }
 
